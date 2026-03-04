@@ -3,43 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MyTask</title>
+<title>Sidebar Test</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
-
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <div class="tab todo active" onclick="showCategory('todo')">TO DO</div>
-        <div class="tab routine" onclick="showCategory('routine')">ROUTINE</div>
-        <div class="tab event" onclick="showCategory('event')">EVENT</div>
-        <div class="tab checklist" onclick="showCategory('checklist')">CHECK</div>
-        <div class="tab calendar" onclick="showCategory('calendar')">CAL</div>
-    </div>
-
-    <!-- MAIN -->
-    <div class="main">
-
-        <div id="inputArea" class="inputArea">
-            <input type="text" id="taskInput" placeholder="Neue Aufgabe...">
-            <input type="date" id="dateInput">
-            <select id="priorityInput">
-                <option value="low">Niedrig</option>
-                <option value="medium">Mittel</option>
-                <option value="high">Hoch</option>
-            </select>
-            <button onclick="addTask()">+</button>
-        </div>
-
-        <div id="content"></div>
-
-    </div>
-
+<div class="sidebar">
+    <div class="item" onclick="activate(this)">T</div>
+    <div class="item" onclick="activate(this)">R</div>
+    <div class="item" onclick="activate(this)">E</div>
+    <div class="item" onclick="activate(this)">C</div>
+    <div class="item" onclick="activate(this)">K</div>
+    <div class="item" onclick="activate(this)">S</div>
 </div>
 
-<script src="app.js"></script>
+<script>
+function activate(element) {
+    document.querySelectorAll(".item").forEach(el => {
+        el.classList.remove("active");
+    });
+    element.classList.add("active");
+}
+</script>
+
 </body>
 </html>

@@ -1,103 +1,72 @@
-/* Basis */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #111;
-  color: white;
-  height: 100vh;
+body {
+    margin: 0;
+    font-family: -apple-system, sans-serif;
+    background: #111;
+    color: white;
 }
 
 .container {
-  display: flex;
-  height: 100vh;
+    display: flex;
+    height: 100vh;
 }
 
-/* Sidebar fixiert */
+/* SIDEBAR */
 .sidebar {
-  width: 80px;
-  background: #1a1a1a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.sidebar h2 {
-  margin: 0 0 20px 0;
-  text-align: center;
-}
-
-/* Sidebar Tabs */
-.tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
+    width: 90px;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 30px;
 }
 
 .tab {
-  writing-mode: vertical-rl; 
-  text-orientation: mixed;
-  background: #222;
-  color: white;
-  padding: 12px 8px;
-  border-radius: 10px 0 0 10px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-  user-select: none;
+    transform: rotate(-90deg);
+    padding: 15px 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #222;
+    width: 120px;
+    text-align: center;
 }
 
 .tab.active {
-  background: #4CAF50; 
+    background: #4CAF50;
 }
 
-.tab:hover {
-  background: #333;
-}
-
-/* Hauptbereich */
+/* MAIN */
 .main {
-  flex: 1;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-y: auto;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
 }
 
-.input-area {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+.inputArea {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 input, select, button {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
 }
 
 button {
-  background: #4CAF50;
-  color: white;
-  cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
 }
 
-/* Kartenlayout */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 15px;
-}
-
+/* CARDS */
 .card {
-  background: #222;
-  padding: 15px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
 }
 
 .low { border-left: 5px solid green; }
@@ -105,17 +74,6 @@ button {
 .high { border-left: 5px solid red; }
 
 .completed {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-
-.card button {
-  align-self: flex-end;
-  margin-top: 10px;
-  padding: 5px 8px;
-  background: red;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  border: none;
+    text-decoration: line-through;
+    opacity: 0.6;
 }

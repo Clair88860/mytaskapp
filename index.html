@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyTask App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>MyTask</h2>
+      <div class="tabs">
+        <div class="tab todo active" onclick="showCategory('todo')">To-Do</div>
+        <div class="tab routine" onclick="showCategory('routine')">Routine</div>
+        <div class="tab event" onclick="showCategory('event')">Event</div>
+        <div class="tab checklist" onclick="showCategory('checklist')">Checkliste</div>
+        <div class="tab calendar" onclick="showCategory('calendar')">Kalender</div>
+      </div>
+    </div>
+
+    <!-- Hauptbereich -->
+    <div class="main">
+      <!-- Eingabebereich nur bei To-Do -->
+      <div id="inputArea" class="input-area">
+        <input type="text" id="taskInput" placeholder="Neue Aufgabe...">
+        <input type="date" id="dateInput">
+        <select id="priorityInput">
+          <option value="low">Niedrig</option>
+          <option value="medium">Mittel</option>
+          <option value="high">Hoch</option>
+        </select>
+        <button onclick="addTask()">+</button>
+      </div>
+
+      <!-- Task-Karten oder Kategorie-Text -->
+      <div id="taskList" class="cards"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

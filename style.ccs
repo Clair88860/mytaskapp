@@ -1,0 +1,121 @@
+/* Basis */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #111;
+  color: white;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar fixiert */
+.sidebar {
+  width: 80px;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.sidebar h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+/* Sidebar Tabs */
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.tab {
+  writing-mode: vertical-rl; 
+  text-orientation: mixed;
+  background: #222;
+  color: white;
+  padding: 12px 8px;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  user-select: none;
+}
+
+.tab.active {
+  background: #4CAF50; 
+}
+
+.tab:hover {
+  background: #333;
+}
+
+/* Hauptbereich */
+.main {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+input, select, button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+/* Kartenlayout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #222;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.low { border-left: 5px solid green; }
+.medium { border-left: 5px solid orange; }
+.high { border-left: 5px solid red; }
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.card button {
+  align-self: flex-end;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background: red;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
